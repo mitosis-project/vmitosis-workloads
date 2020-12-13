@@ -32,9 +32,9 @@ extern FILE *opt_file_out;
 //#define NUPDATE (1UL << 28)
 
 #ifdef _OPENMP
-#define NUPDATE (1UL << 33)
+#define NUPDATE (1UL << 30)
 #else
-#define NUPDATE (1UL << 33)
+#define NUPDATE (1UL << 30)
 #endif
 
 

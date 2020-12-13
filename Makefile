@@ -1,15 +1,16 @@
-###############################################################################
-# Makefile to build Binaries for the ASPLOS'20 Artifact Evaluation
+#################################################################################
+# Makefile to generate binaries for the paper
 #
-# Paper: Mitosis - Mitosis: Transparently Self-Replicating Page-Tables 
-#                  for Large-Memory Machines
-# Authors: Reto Achermann, Jayneel Gandhi, Timothy Roscoe, 
-#          Abhishek Bhattacharjee, and Ashish Panwar
-###############################################################################
+# Fast Local Page-Tables for Virtualized NUMA Servers with vMitosis [ASPLOS'21]
+#
+# Authors: Ashish Panwar, Reto Achermann, Abhishek Bhattacharjee, Arkaprava Basu,
+#          K. Gopinath and Jayneel Gandhi
+#################################################################################
 
-all: btree canneal graph500 gups xsbench
+all: btree canneal graph500 gups xsbench redis
 
-clean-all: clean-btree clean-canneal clean-graph500 clean-gups clean-xsbench
+clean-all: clean-btree clean-canneal clean-graph500 clean-gups clean-xsbench \
+	clean-redis
 
 
 ###############################################################################
