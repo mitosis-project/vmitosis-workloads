@@ -7,12 +7,9 @@
 #          Abhishek Bhattacharjee, and Ashish Panwar
 ###############################################################################
 
-all: btree canneal graph500 gups hashjoin liblinear pagerank redis \
-	 xsbench memops memcached
+all: btree canneal graph500 gups xsbench
 
-clean-all: clean-btree clean-canneal clean-graph500 clean-gups clean-hashjoin \
-		   clean-liblinear clean-pagerank clean-redis clean-xsbench \
-		   clean-memops clean-memcached	 
+clean-all: clean-btree clean-canneal clean-graph500 clean-gups clean-xsbench
 
 
 ###############################################################################
