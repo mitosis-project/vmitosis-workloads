@@ -7,7 +7,7 @@
 #          K. Gopinath and Jayneel Gandhi
 #################################################################################
 
-all: btree canneal graph500 gups xsbench redis
+all: btree canneal graph500 gups xsbench redis stream
 
 clean-all: clean-btree clean-canneal clean-graph500 clean-gups clean-xsbench \
 	clean-redis
@@ -315,14 +315,15 @@ bin/bench_stream :
 	+$(MAKE) -C stream stream
 	cp stream/stream bin/bench_stream
 
-bin/bench_stream_numa :
-	+$(MAKE) -C stream stream_numa
-	cp stream/stream_numa bin/bench_stream_numa	
+#bin/bench_stream_numa :
+#	+$(MAKE) -C stream stream_numa
+#	cp stream/stream_numa bin/bench_stream_numa	
 
-stream: bin/bench_stream bin/bench_stream_numa 
+stream: bin/bench_stream #bin/bench_stream_numa 
 
 clean-stream :
 	+$(MAKE) -C stream clean
+	rm bin/bench_stream
 
 ###############################################################################
 # Clean
