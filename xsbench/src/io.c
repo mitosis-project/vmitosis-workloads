@@ -112,7 +112,7 @@ void print_results( Inputs in, int mype, double runtime, int nprocs,
 		// For bechmarking, output lookup/s data to file
 		if( SAVE )
 		{
-			FILE * out = fopen( "results.txt", "a" );
+			FILE * out = fopen( "/tmp/results.txt", "a" );
 			fprintf(out, "%d\t%d\n", in.nthreads, lookups_per_sec);
 			fclose(out);
 		}
