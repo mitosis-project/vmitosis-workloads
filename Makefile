@@ -91,7 +91,8 @@ bin/bench_canneal_st : canneal/libcanneal.a  $(COMMON_MAIN_S)
 canneal : bin/bench_canneal_st bin/bench_canneal_mt
 
 clean-canneal :
-	+$(MAKE) -C canneal clean	
+	+$(MAKE) -C canneal clean
+	rm bin/bench_canneal*
 
 
 ###############################################################################
@@ -120,7 +121,8 @@ bin/bench_graph500_mt  : graph500/omp-csr/omp-csr.a $(COMMON_MAIN_M)
 graph500 : bin/bench_graph500_mt bin/bench_graph500_st
 
 clean-graph500 :
-	+$(MAKE) -C graph500 clean	
+	+$(MAKE) -C graph500 clean
+	rm bin/bench_graph500*
 
 
 ###############################################################################
@@ -145,6 +147,7 @@ gups : bin/bench_gups_st bin/bench_gups_toy
 
 clean-gups :
 	+$(MAKE) -C gups clean
+	rm bin/bench_gups*
 
 
 ###############################################################################
@@ -174,6 +177,7 @@ hashjoin : bin/bench_hashjoin_st bin/bench_hashjoin_mt bin/bench_hashjoin_dump
 
 clean-hashjoin :
 	+$(MAKE) -C hashjoin clean
+	rm bin/bench_hashjoin*
 
 
 ###############################################################################
@@ -191,6 +195,7 @@ liblinear : bin/bench_liblinear_mt
 
 clean-liblinear :
 	+$(MAKE) -C liblinear clean
+	rm bin/bench_liblinear*
 
 ###############################################################################
 # PageRank
@@ -208,6 +213,7 @@ pagerank : bin/bench_pagerank_mt
 
 clean-pagerank :
 	+$(MAKE) -C gapbs clean
+	rm bin/bench_pagerank*
 
 
 ###############################################################################
@@ -243,6 +249,7 @@ redis : bin/bench_redis_st
 
 clean-redis :
 	+$(MAKE) -C redis clean
+	rm bin/bench_redis*
 
 
 ###############################################################################
@@ -273,6 +280,7 @@ xsbench : bin/bench_xsbench_mt bin/bench_xsbench_dump
 
 clean-xsbench :
 	+$(MAKE) -C $(XSBENCHSRC) clean
+	rm bin/bench_xsbench*
 
 
 ###############################################################################
@@ -291,6 +299,7 @@ memcached : bin/bench_memcached_mt
 
 clean-memcached :
 	+$(MAKE) -C memcached clean
+	rm bin/bench_memcached*
 
 
 ###############################################################################
